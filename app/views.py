@@ -14,13 +14,14 @@ from .forms import UploadForm
 
 # Helpers
 def get_uploaded_images():
-    image_list = []
+    # image_list = []
+    file_list = []
     rootdir = os.getcwd()
     for subdir, dirs, files in os.walk(rootdir + '/uploads'):
         for file in files:
-            image_list.append(os.path.join(subdir,file))
-
-    return image_list
+            # image_list.append(os.path.join(subdir,file))
+            file_list.append(file)
+    return file_list
             
 
 ###
